@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayPals</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/rooms_styles.css">
+    <script type="text/javascript" src="public/js/rooms.js"></script>
+</head>
+<body>
+    <div id="logo_div">
+        <img id="logo" src="public/images/logo.png"/>
+    </div>
+    <div id="page_div">
+        <div id="list_outer_box">
+            <div id="list_inner_top">
+                <div id="label_div">
+                    <h7 id="text_label">Room List</h7> 
+                </div>
+                <div id="buttons_div">
+                    <!-- <button class="button glow-on-hover" type="submit">Enter</button> -->
+                </div>
+                <div id="search_div">
+                    <input id="search_input" type="text" placeholder="Search" onkeydown="return isValid(event);"/>
+                </div>
+            </div>
+            <div id="list_inner_box">
+                <div id="room_list">
+                    <table id="rooms">
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let max_rooms = 10;        
+        var tb = document.getElementById("rooms");
+
+        console.log(room_arr);
+        console.log("100000000000");
+    
+        for(var i=0;i<Math.min(max_rooms, room_arr.length);i++) {
+            tb.innerHTML += "<tr>"
+            for(var j=0;j<room_arr[i].length;j++) {
+                tb.innerHTML += "<td>"+rooms[i][j]+"</td>"
+            }
+            tb.innerHTML += "</tr>"
+        }
+    </script>
+</body>
+</html>

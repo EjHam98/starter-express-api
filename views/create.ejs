@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayPals</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/create.css">
+    <script type="text/javascript" src="public/js/create.js"></script>
+</head>
+<body>
+    <div id="logo_div">
+        <img id="logo" src="public/images/logo.png"/>
+    </div>
+    <div id="page_div">
+        <div id="form_box">
+            <!-- <form id="username_form" action="/rooms" method="POST"> -->
+            <div id="username_form">
+                <div id="text_div">
+                    <h1 id="text_title">Welcome to PlayPals!</h1> 
+                    <div id="nickname_div">
+                        <h3 id="nick">Nickname: </h3> 
+                        <h3 id="nickname"><%= locals.nickname %></h3>
+                    </div>
+                </div>
+                <form id="form" method="POST">
+                    <input class="hidden" name="nickname" value=<%= locals.nickname %> >
+                    <div id="room_id_div">
+                        <input class="input" name="room_id" placeholder="Room ID">
+                    </div>
+                    <div id="password_div">
+                        <input class="input" name="password" placeholder="Password" type="password">
+                    </div>
+                    <div id="create_back_div">
+                        <div id="create_div"><button id="create" class="button glow-on-hover" type="submit" onclick="return createbtn();">Create Room</button></div>
+                        <div id="back_div"><button id="back" class="button glow-on-hover" type="submit" onclick="return backbtn();">Back</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
